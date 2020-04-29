@@ -19,7 +19,7 @@ fn main() -> io::Result<()> {
     // println!("{:?}", args);
     let numthread: u8 = args[1].parse::<u8>().unwrap();
     // validate_ppm("aux/in/dahlia-red-blossom-bloom-60597.png");
-    validate_ppm("aux/in/dahlia-red-blossom-bloom-60597.ppm");
+    // validate_ppm("aux/in/dahlia-red-blossom-bloom-60597.ppm");
     // validate_ppm("aux/in/garden-rose-red-pink-56866.png");
     // validate_ppm("../data/bible.txt");
     // println!("number of threads: {}", numthread);
@@ -173,7 +173,7 @@ fn main() -> io::Result<()> {
                             break;
                         }
 
-                        println!("encoding on thread #{} msg #{}", x, count);
+                        println!("encoding on thread #{} msg #{}", x, c);
                         let mut bytes = match read_byte_by_byte(&plan.1) {
                             Ok(line) => line,
                             Err(_) => panic!("Error reading the file {}", &plan.1),
